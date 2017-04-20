@@ -1,17 +1,17 @@
 [
     {
         "name": "youshido/graphql",
-        "version": "v1.4.2.8",
-        "version_normalized": "1.4.2.8",
+        "version": "v1.4.3",
+        "version_normalized": "1.4.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Youshido/GraphQL.git",
-            "reference": "95db8c277e6b974c857e915ccac7395654710291"
+            "reference": "bdab3510031296d7d87e5468491bd9a85ead710e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Youshido/GraphQL/zipball/95db8c277e6b974c857e915ccac7395654710291",
-            "reference": "95db8c277e6b974c857e915ccac7395654710291",
+            "url": "https://api.github.com/repos/Youshido/GraphQL/zipball/bdab3510031296d7d87e5468491bd9a85ead710e",
+            "reference": "bdab3510031296d7d87e5468491bd9a85ead710e",
             "shasum": ""
         },
         "require": {
@@ -20,7 +20,7 @@
         "require-dev": {
             "phpunit/phpunit": "^4.8"
         },
-        "time": "2016-12-23T14:27:44+00:00",
+        "time": "2017-04-12T15:18:05+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

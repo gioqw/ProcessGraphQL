@@ -45,6 +45,10 @@ abstract class AbstractInputObjectType extends AbstractType
             $value = $value->getValue();
         }
 
+        if (empty($value)) {
+            return true;
+        }
+
         if (!is_array($value)) {
             return false;
         }
@@ -63,6 +67,9 @@ abstract class AbstractInputObjectType extends AbstractType
                 unset($requiredFields[$valueKey]);
             }
         }
+        if (count($requiredFields)) {
+            $this->lastError = sprintf('%s %s required on %s', implode(', ', array_keys($requiredFields)), count($requiredFields) > 1 ? 'are' : 'is', $typeConfig->getName());
+        }
 
         return !(count($requiredFields) > 0);
     }
@@ -79,6 +86,7 @@ abstract class AbstractInputObjectType extends AbstractType
 
     public function parseValue($value)
     {
+        if (is_null($value)) return null;
         if($value instanceof InputObject) {
             $value = $value->getValue();
         }
