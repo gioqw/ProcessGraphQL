@@ -36,7 +36,6 @@ class PageNumChildrenField extends AbstractField {
     $config->addArgument(new InputField([
       'name' => self::firstArgumentName,
       'type' => new BooleanType(),
-      'default' => false,
     ]));
   }
 
