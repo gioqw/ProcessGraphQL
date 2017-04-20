@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "react-scripts": "0.9.5"
   },
   "dependencies": {
     "es6-promise": "^4.0.5",
-    "graphiql": "^0.9.0",
-    "graphql": "0.8.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "graphiql": "^0.10.0",
+    "graphql": "^0.9.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "superagent": "^3.4.0"
   },
   "scripts": {

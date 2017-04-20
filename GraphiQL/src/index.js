@@ -4,7 +4,6 @@ import GraphiQL from 'graphiql';
 import request from 'superagent';
 import 'es6-promise/auto';
 import './index.css';
-import 'graphiql/graphiql.css';
 
 /**
  * This GraphiQL example illustrates how to use some of GraphiQL's props
