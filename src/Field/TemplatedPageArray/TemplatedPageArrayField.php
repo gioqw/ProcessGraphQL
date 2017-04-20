@@ -4,15 +4,15 @@ namespace ProcessWire\GraphQL\Field\TemplatedPageArray;
 
 use Youshido\GraphQL\Field\AbstractField;
 use Youshido\GraphQL\Execution\ResolveInfo;
+use Youshido\GraphQL\Config\Field\FieldConfig;
+use Youshido\GraphQL\Field\InputField;
+
 use ProcessWire\Template;
 use Processwire\GraphQL\Utils;
 use ProcessWire\GraphQL\Type\Object\TemplatedPageArrayType;
 use ProcessWire\GraphQL\Type\Scalar\TemplatedSelectorType;
-use ProcessWire\GraphQL\Field\Traits\OptionalTemplatedSelectorTrait;
 
 class TemplatedPageArrayField extends AbstractField {
-
-  use OptionalTemplatedSelectorTrait;
 
   protected $template;
 
@@ -39,11 +39,27 @@ class TemplatedPageArrayField extends AbstractField {
     return "PageArray that stores only pages with template `" . $this->template->name . "`.";
   }
 
+  public function build(FieldConfig $config)
+  {
+    $config->addArgument(new InputField([
+      'name' => TemplatedSelectorType::ARGUMENT_NAME,
+      'type' => new TemplatedSelectorType($this->template),
+    ]));
+  }
+
   public function resolve($value, array $args, ResolveInfo $info)
   {
-    Utils::moduleConfig()->currentTemplateContext = $this->template;
-    $pages = \Processwire\wire('pages');
-    return $pages->find($args[TemplatedSelectorType::ARGUMENT_NAME]);
+    if (isset($args[TemplatedSelectorType::ARGUMENT_NAME])) {
+      $selector = $args[TemplatedSelectorType::ARGUMENT_NAME];
+    } else {
+      $defaultValue = new TemplatedSelectorType($this->template);
+      $selector = $defaultValue->serialize("");
+    }
+    
+    if (!$value instanceof Pages && !$value instanceof PageArray) {
+      $value = Utils::pages();  
+    }
+    return $value->find($selector);
   }
 
 }
