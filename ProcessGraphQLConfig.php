@@ -352,17 +352,6 @@ class ProcessGraphQLConfig extends Moduleconfig {
     $f->description = $desc;
     $fSet->add($f);
 
-    // pagesQuery
-    $f = $this->modules->get('InputfieldCheckbox');
-    $f->attr('name', 'pagesQuery');
-    $f->label = 'pages Query';
-    $desc = "Experimental!" . PHP_EOL;
-    $desc .= " Adds '`pages`' query field. ";
-    $desc .= 'Allows you to fetch pages in ProcessWire\'s `$pages` style. ';
-    $desc .= 'Like `$pages->find(...)`.';
-    $f->description = $desc;
-    $fSet->add($f);
-
     $inputfields->add($fSet);
 
     return $inputfields;

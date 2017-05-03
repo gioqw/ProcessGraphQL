@@ -3,7 +3,6 @@
 use Youshido\GraphQL\Config\Schema\SchemaConfig;
 use Youshido\GraphQL\Schema\AbstractSchema;
 use ProcessWire\GraphQL\Utils;
-use ProcessWire\GraphQL\Field\Pages\PagesField;
 use ProcessWire\GraphQL\Field\TemplatedPageArray\TemplatedPageArrayField;
 use ProcessWire\GraphQL\Field\Debug\DbQueryCountField;
 use ProcessWire\GraphQL\Field\Auth\LoginField;
@@ -25,11 +24,6 @@ class Schema extends AbstractSchema {
      * Query
      */
     $query = $config->getQuery();
-
-    // $pages API
-    if ($moduleConfig->pagesQuery) {
-      $query->addField(new PagesField());
-    }
 
     // $templates
     foreach ($moduleConfig->legalViewTemplates as $template) {
