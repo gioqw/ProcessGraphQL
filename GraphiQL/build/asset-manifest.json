@@ -1,13 +1,14 @@
 {
-  "main.css": "static/css/main.48946f6d.css",
-  "main.css.map": "static/css/main.48946f6d.css.map",
-  "main.js": "static/js/main.5581c0a6.js",
-  "main.js.map": "static/js/main.5581c0a6.js.map",
-  "static/media/GraphQLLanguageService.js.flow": "static/media/GraphQLLanguageService.js.fa07138d.flow",
+  "main.css": "static/css/main.8921abce.css",
+  "main.css.map": "static/css/main.8921abce.css.map",
+  "main.js": "static/js/main.75f7cb78.js",
+  "main.js.map": "static/js/main.75f7cb78.js.map",
+  "static/media/GraphQLLanguageService.js.flow": "static/media/GraphQLLanguageService.js.5ab204b9.flow",
   "static/media/autocompleteUtils.js.flow": "static/media/autocompleteUtils.js.4ce7ba19.flow",
-  "static/media/getAutocompleteSuggestions.js.flow": "static/media/getAutocompleteSuggestions.js.5f735c7b.flow",
-  "static/media/getDefinition.js.flow": "static/media/getDefinition.js.0c48668e.flow",
-  "static/media/getDiagnostics.js.flow": "static/media/getDiagnostics.js.889c0b27.flow",
-  "static/media/getOutline.js.flow": "static/media/getOutline.js.458a3518.flow",
-  "static/media/index.js.flow": "static/media/index.js.641230f5.flow"
+  "static/media/getAutocompleteSuggestions.js.flow": "static/media/getAutocompleteSuggestions.js.7f98f032.flow",
+  "static/media/getDefinition.js.flow": "static/media/getDefinition.js.4dbec62f.flow",
+  "static/media/getDiagnostics.js.flow": "static/media/getDiagnostics.js.65b0979a.flow",
+  "static/media/getHoverInformation.js.flow": "static/media/getHoverInformation.js.d9411837.flow",
+  "static/media/getOutline.js.flow": "static/media/getOutline.js.c04e3998.flow",
+  "static/media/index.js.flow": "static/media/index.js.02c24280.flow"
 }

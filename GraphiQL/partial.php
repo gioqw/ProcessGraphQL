@@ -41,5 +41,8 @@
     width: 94%;
     background: none;
   }
+  .graphiql-container .variable-editor {
+    height: 32px;
+  }
 </style>
 <div id="graphiql">Loading...</div>
